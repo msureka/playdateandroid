@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.bba.playdate1.Add_profilematch_Activity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/relativeLayout11"
+
+        android:background="@color/white"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gaga_txt"
+            android:text="GAGA"
+            android:textColor="@color/black1"
+            android:fontFamily="@font/kg_feeling_regular"
+            android:textSize="44sp"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <FrameLayout
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/f1"
+            android:layout_below="@+id/gaga_txt"
+            android:layout_marginTop="30dp">
+
+            <!-- following imageView acts as the boarder which sitting in the background of our main container ImageView -->
+
+            <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:id="@+id/back_imgviewqw"/>
+
+            <!-- following imageView holds the image as the container to our image -->
+            <!-- layout_margin defines the width of our boarder, here it's 1dp -->
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/profileImgview22"
+                android:layout_gravity="center"
+                android:src="@drawable/defaultboy"
+                app:siBorderWidth="0dp"
+                app:siBorderColor="@color/gray" />
+
+        </FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You have received a new gift in your inbox!"
+            android:textSize="18sp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:id="@+id/youme_txt22"
+            android:layout_below="@+id/f1"
+            android:textColor="@color/black"
+            android:layout_marginEnd="40dp"
+            android:fontFamily="@font/helvetica_normal"
+            android:layout_marginStart="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <TextView
+            android:id="@+id/later_txt22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/youme_txt22"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="66dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:paddingTop="15dp"
+            android:text="Thanks"
+            android:background="@drawable/btn_yellow_backgroung"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

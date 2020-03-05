@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:emojicon="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/headerrl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Lightyellow">
+
+        <TextView
+            android:id="@+id/titletxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:text="My child Profile"
+            android:fontFamily="@font/kg_feeling_regular"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/next_txt"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/titletxt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/helvetica_medium"
+            android:text="next"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerrl"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headerrl">
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+
+                <FrameLayout
+                    android:id="@+id/f1"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="10dp">
+
+                    <!-- following imageView acts as the boarder which sitting in the background of our main container ImageView -->
+                    <!-- following imageView holds the image as the container to our image -->
+                    <!-- layout_margin defines the width of our boarder, here it's 1dp -->
+
+                    <com.github.siyamed.shapeimageview.CircularImageView
+                        android:id="@+id/profileImgview"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/gaycricle"
+                        app:siBorderColor="@color/gray"
+                        app:siBorderWidth="0dp" />
+
+                    <TextView
+                        android:id="@+id/adddpictxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:textColor="@color/black1"
+                        android:layout_marginTop="50dp"
+                        android:text="Add a picture"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/menparenttxt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="80dp"
+                        android:textColor="@color/black1"
+                        android:fontFamily="@font/kg_feeling_regular"
+                        android:text="My Parents\n      and I"
+                        android:textSize="18sp" />
+
+                </FrameLayout>
+
+
+                <Button
+                    android:id="@+id/male_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_below="@+id/f1"
+                    android:layout_marginLeft="40dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@drawable/gaycricle"
+                    android:text="Boy" />
+
+
+                <Button
+                    android:id="@+id/female_button"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/male_button"
+                    android:layout_marginRight="40dp"
+                    android:textStyle="bold"
+                    android:textAllCaps="false"
+                    android:background="@drawable/gaycricle"
+                    android:text="Girl" />
+
+                <ImageView
+                    android:id="@+id/back_imgview"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_alignLeft="@+id/f1"
+                    android:layout_alignStart="@+id/f1"
+                    android:layout_alignTop="@+id/f1"
+                    android:layout_gravity="center"
+                    android:src="@drawable/graypicture" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/emoji_txtrl"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/r1"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lable_border">
+
+                <TextView
+                    android:id="@+id/emoji_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/emoji2_txt"
+                    android:layout_alignBottom="@+id/emoji2_txt"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="My 3 emojis"
+                    android:fontFamily="@font/helvetica_regular"
+                    android:textColor="@color/black1"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/emoji3_txt"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/emoji2_txt"
+                    android:layout_toRightOf="@+id/emoji2_txt"
+                    android:inputType="textFilter"
+                    android:visibility="visible"/>
+
+
+
+                <EditText
+                    android:id="@+id/emoji2_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_toEndOf="@+id/emoji1_txt"
+                    android:layout_toRightOf="@+id/emoji1_txt"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:inputType="textFilter"
+                    />
+
+                <EditText
+                    android:id="@+id/emoji1_txt"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/emoji2_txt"
+                    android:layout_alignBottom="@+id/emoji2_txt"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:nextFocusForward="@+id/emoji2_txt"
+                    android:layout_toEndOf="@+id/emoji_txt"
+                    android:layout_toRightOf="@+id/emoji_txt"
+                    android:inputType="textFilter" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/namerl"
+                android:layout_width="wrap_content"
+                android:layout_height="105dp"
+                android:layout_below="@+id/emoji_txtrl"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/lable_border">
+
+                <TextView
+                    android:id="@+id/nameTxtw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_above="@+id/name_Text"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:fontFamily="@font/helvetica_regular"
+                    android:text="My child's name is: "
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/name_Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_alignLeft="@+id/nameTxtw"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@+id/nameTxtw"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Name"
+                    android:maxLines="1"
+                    android:fontFamily="@font/kg_feeling_regular"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/img5"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/arrownext" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/aboutrl"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/namerl"
+                android:gravity="center"
+                android:background="@drawable/lable_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/about_TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:maxLines="1"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@+id/about_edittxt"
+                    android:text="About my parents &amp; I "
+                    android:textSize="18sp"
+                    android:layout_weight="1.9"/>
+
+                <TextView
+                    android:id="@+id/about_edittxt"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                   android:lines="1"
+                    android:layout_toLeftOf="@+id/img10"
+                    android:gravity="center_vertical"
+                    android:textAlignment="viewEnd"
+                    android:text="add here"
+                    android:textSize="15sp"
+                    android:layout_weight="0.8"
+                    emojicon:ignore="RtlCompat" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3">
+
+                    <ImageView
+                        android:id="@+id/img10"
+                        android:layout_width="20dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="5dp"
+                        android:padding="5dp"
+                        android:src="@drawable/arrownext" />
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/spealrl"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/aboutrl"
+                android:gravity="center"
+                android:background="@drawable/lable_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <TextView
+                    android:id="@+id/speak_TextView"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/helvetica_regular"
+                    android:text="I speak"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/speak_Text"
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/img9"
+                    android:textSize="15sp"
+                    android:maxLines="1"
+                    android:text=""
+                    android:gravity="center_vertical"
+                    android:textAlignment="viewEnd"
+                    android:visibility="visible"
+                    emojicon:ignore="RtlCompat"
+                    android:layout_weight="1.7"/>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3">
+                <ImageView
+                    android:id="@+id/img9"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/arrownext" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bdayrl"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/spealrl"
+                android:background="@drawable/lable_border"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/row1_textView"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/helvetica_regular"
+                    android:layout_weight="1.1"
+                    android:text="My Bithdate"
+                    android:maxLines="1"
+                    android:gravity="center_vertical"
+                    android:textSize="18sp"
+                    />
+
+                <TextView
+                    android:id="@+id/birth_editText"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/img7"
+                    android:text="BOD"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:maxLines="1"
+                    android:layout_weight="1.6"
+                    android:gravity="center_vertical"
+                    android:textAlignment="viewEnd"
+                    emojicon:ignore="RtlCompat" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3">
+                <ImageView
+                    android:id="@+id/img7"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:src="@drawable/arrownext"
+                    />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#1c87c7</color>
+    <color name="Lightyellow">#fff252</color>
+    <color name="Lightyellow1">#e6d246</color>
+    <color name="Lightyellow2">#fdf7ec65</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#282728</color>
+    <color name="black1">#000000</color>
+    <color name="bgcolor">#285158</color>
+    <color name="gray">#c9c5c5</color>
+    <color name="lightpink">#f4c2c2</color>
+    <color name="lightblue">#cfdef4</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="lightgray">#ebeaeb</color>
+    <color name="darkgray">#959494</color>
+    <color name="red">#fb1b1b</color>
+    <color name="sky">#e2eff2</color>
+    <color name="transparent_green_color">#d4343834</color>
+    <color name="windowBackground">#1C1C1C</color>
+    <color name="colorButtonNormal">#FFFFFB</color>
+    <color name="textColorPrimary">#FFFFFB</color>
+    <color name="textColorPrimaryInverse">#1C1C1C</color>
+    <color name="overlay">#AA1C1C1C</color>
+    <color name="divider">#333333</color>
+    <color name="boy_color">#dcf2fd</color>
+    <color name="girl_color">#facfd6</color>
+    <color name="girl_boy_color">#fff460</color>
+
+</resources>
+

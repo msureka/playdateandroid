@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Lightyellow"
+        android:id="@+id/header">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Settings"
+            android:textSize="18sp"
+            android:id="@+id/tiltetxt"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Done"
+            android:layout_marginRight="10dp"
+            android:id="@+id/donetxt"
+            android:textSize="18sp"
+
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <!-- ScroolView Layout -->
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_below="@+id/header">
+
+        <!-- Relative Layout for Scrolview-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/content"
+            android:background="@color/white">
+
+            <!-- Relative layout for Lable One "Friends Discovery"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/lightgray"
+                android:id="@+id/friend_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FRIENDS DISCOVERY"
+                    android:textSize="18sp"
+                    android:id="@+id/frinds_dis_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/darkgray"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for Make friends tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/make_frnd_lable"
+                android:layout_below="@+id/friend_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make Friends With?"
+                    android:textSize="18sp"
+                    android:id="@+id/make_frnd_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+                <io.github.rockerhieu.emojicon.EmojiconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Boys &amp; Girls "
+                    android:textSize="16sp"
+                    android:id="@+id/boy_girl_txt"
+                    android:layout_marginRight="3dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray"
+                    android:layout_toLeftOf="@+id/frnd_next_ing"/>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/frnd_next_ing"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrownext"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for How Old tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/how_old_lable"
+                android:layout_below="@+id/make_frnd_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="How Old?"
+                    android:textSize="18sp"
+                    android:id="@+id/how_old_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All Age"
+                    android:textSize="16sp"
+                    android:id="@+id/age_txt"
+                    android:layout_marginRight="3dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray"
+                    android:layout_toLeftOf="@+id/age_next_img"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/age_next_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrownext"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for Where tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:id="@+id/where_lable"
+                android:layout_below="@+id/how_old_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Where?"
+                    android:textSize="18sp"
+                    android:id="@+id/where_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My City Only"
+                    android:textSize="16sp"
+                    android:id="@+id/city_txt"
+                    android:layout_marginRight="3dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray"
+                    android:layout_toLeftOf="@+id/where_next_img"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/where_next_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrownext"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for Lable Two "My Account"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/lightgray"
+                android:id="@+id/account_lable"
+                android:layout_below="@+id/where_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MY ACCOUNT"
+                    android:textSize="18sp"
+                    android:id="@+id/my_account_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/darkgray"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for Name tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/name_lable"
+                android:layout_below="@+id/account_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="18sp"
+                    android:id="@+id/name_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="16sp"
+                    android:id="@+id/name_value_txt"
+                    android:layout_marginRight="3dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray"
+                    android:layout_toLeftOf="@+id/name_next_img"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/name_next_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrownext"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for gender tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/gender_lable"
+                android:layout_below="@+id/name_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textSize="18sp"
+                    android:id="@+id/gender_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+
+                <io.github.rockerhieu.emojicon.EmojiconTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Boy\uE001"
+                    android:textColor="@color/gray"
+                    android:textSize="18sp"
+                    android:id="@+id/gender_value_txt"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/gender_next_img"/>
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/gender_next_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrownext"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for birthdate tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/birth_lable"
+                android:layout_below="@+id/gender_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="BirthDate"
+                    android:textSize="18sp"
+                    android:id="@+id/birth_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16-06-1994"
+                    android:textSize="16sp"
+                    android:id="@+id/birth_value_txt"
+                    android:layout_marginRight="3dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray"
+                    android:layout_toLeftOf="@+id/birth_next_img"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/birth_next_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrownext"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for speak tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/speak_lable"
+                android:layout_below="@+id/birth_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I Speak"
+                    android:textSize="18sp"
+                    android:id="@+id/speak_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:textSize="16sp"
+                    android:id="@+id/speak_value_txt"
+                    android:layout_marginRight="3dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray"
+                    android:layout_toLeftOf="@+id/speak_next_img"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/speak_next_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrownext"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for descriptio tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/desc_lable"
+                android:layout_below="@+id/speak_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textSize="18sp"
+                    android:id="@+id/desc_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="edit here"
+                    android:textSize="16sp"
+                    android:id="@+id/desc_value_txt"
+                    android:layout_marginRight="3dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray"
+                    android:layout_toLeftOf="@+id/desc_next_img"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/desc_next_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrownext"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for Profile cards tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:id="@+id/cards_lable"
+                android:layout_below="@+id/desc_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile Cards"
+                    android:textSize="18sp"
+                    android:id="@+id/cards_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="edit answer"
+                    android:textSize="16sp"
+                    android:id="@+id/cards_value_txt"
+                    android:layout_marginRight="3dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/gray"
+                    android:layout_toLeftOf="@+id/cards_next_img"/>
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="15dp"
+                    android:id="@+id/cards_next_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrownext"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for Lable Three "Push Notification"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/lightgray"
+                android:id="@+id/push_lable"
+                android:layout_below="@+id/cards_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PUSH NOTIFICATION"
+                    android:textSize="18sp"
+                    android:id="@+id/push_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/darkgray"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for Push matches tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/matches_lable"
+                android:layout_below="@+id/push_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Matches"
+                    android:textSize="18sp"
+                    android:id="@+id/matches_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/matches_switch"
+                    android:textOn="ON"
+                    android:textOff="OFF"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch"/>
+
+            </RelativeLayout>
+            <!-- Relative layout for Push Message tab"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:id="@+id/message_lable"
+                android:layout_below="@+id/matches_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Messages"
+                    android:textSize="18sp"
+                    android:id="@+id/message_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+
+                <android.support.v7.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_switch"
+                    android:textOn="ON"
+                    android:textOff="OFF"
+                    android:layout_marginRight="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:theme="@style/SCBSwitch"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for Lable Four "Action"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/lightgray"
+                android:id="@+id/action_lable"
+                android:layout_below="@+id/message_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACTION"
+                    android:textSize="18sp"
+                    android:id="@+id/action_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/darkgray"/>
+
+            </RelativeLayout>
+
+            <!-- Relative layout for Trems tab-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/term_lable"
+                android:layout_below="@+id/invite_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Terms of Service"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/term_txt"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+            <!-- Relative layout for privacy policies tab-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/privacy_lable"
+                android:layout_below="@+id/term_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Privacy Policy"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/privacy_txt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+
+            <!-- Relative layout for Invite friend tab-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/invite_lable"
+                android:layout_below="@+id/action_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invite a friend"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/invite_txt"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+            <!-- Relative layout for logout tab-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/lable_border"
+                android:id="@+id/logout_lable"
+                android:layout_below="@+id/privacy_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:id="@+id/logout_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+
+            <!-- Relative layout for delete account tab-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:id="@+id/delete_lable"
+                android:layout_below="@+id/logout_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delete my account"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:id="@+id/delete_txt"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/red"/>
+            </RelativeLayout>
+
+            <!-- Relative layout for Lable Four "info"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/lightgray"
+                android:id="@+id/info_lable"
+                android:layout_below="@+id/delete_lable">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Play Date v1.8.53"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/info_txt_setting"
+                    android:textColor="@color/darkgray"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="for the love of our children"
+                    android:textSize="15sp"
+                    android:layout_below="@+id/info_txt_setting"
+                    android:id="@+id/info_txt1"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/darkgray"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!-- scrollView End -->
+
+
+</RelativeLayout>
+

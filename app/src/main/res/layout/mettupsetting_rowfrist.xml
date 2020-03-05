@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout android:id="@+id/relative_fristrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/calendar" />
+
+        <TextView
+            android:id="@+id/textview_setting_title"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_below="@+id/imageView3"
+            android:layout_marginTop="0dp"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text="Test Account" />
+
+        <TextView
+            android:id="@+id/textview_setting_eventcode"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textview_setting_title"
+            android:layout_marginTop="1dp"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:textSize="14dp"
+            android:textStyle="normal"
+            android:gravity="center"
+            android:text="(Event Code: VWKNZ)" />
+
+        <TextView
+            android:id="@+id/textview_setting_location"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textview_setting_eventcode"
+            android:layout_marginTop="1dp"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:gravity="center"
+            android:text="Mumbai" />
+
+        <TextView
+            android:id="@+id/textview_setting_eventdate"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textview_setting_location"
+            android:layout_marginTop="1dp"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:gravity="center"
+            android:text="17th May 2018, 4:16am" />
+
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/image_setting_profile"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/textview_setting_eventdate"
+            android:background="@drawable/defaultboy" />
+
+        <TextView
+            android:id="@+id/textview_setting_name"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_below="@+id/image_setting_profile"
+            android:layout_centerHorizontal="true"
+            android:maxLines="1"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="Created by sachin" />
+    </RelativeLayout>
+
+</RelativeLayout>

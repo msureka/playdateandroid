@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="My favorite superhero is..."
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:hint="Type here name.."
+        android:textSize="20sp"
+        android:fontFamily="@font/helvetica_medium"
+        android:inputType="text|textNoSuggestions"
+        android:singleLine="true"
+        android:textCursorDrawable="@null"
+        android:textStyle="normal" />
+
+
+    <RelativeLayout
+        android:id="@+id/lets_lable"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/blackline_border">
+
+        <TextView
+            android:id="@+id/letspaly_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Let&apos;s play!"
+            android:fontFamily="@font/kg_feeling_regular"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </RelativeLayout>
+</RelativeLayout>
+
+

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/r1">
+
+
+        <TextView
+            android:id="@+id/datetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="3/02/17"
+            android:textColor="@color/lightgray"
+            android:textSize="15sp" />
+  </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/msg_layout"
+        android:layout_width="250dp"
+        android:layout_height="190dp"
+        android:layout_below="@+id/r1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/yellowtextbox">
+
+        <ImageView
+            android:id="@+id/calimg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_below="@+id/image"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/calendar" />
+
+
+        <TextView
+            android:id="@+id/titletxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calimg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Test"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/loctxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/titletxt"
+            android:layout_alignStart="@+id/titletxt"
+            android:layout_below="@+id/titletxt"
+            android:layout_marginTop="5dp"
+            android:text="Test"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/timedatetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loctxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="23rd feb 2018,11.39 am" />
+
+        <TextView
+            android:id="@+id/intxt"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/canttxt"
+            android:layout_toLeftOf="@+id/loctxt"
+            android:layout_toStartOf="@+id/loctxt"
+            android:background="@drawable/blkborder_yellow_backgroung"
+            android:gravity="center"
+            android:text="I'M IN" />
+
+        <TextView
+            android:id="@+id/canttxt"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/timedatetxt"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/titletxt"
+            android:layout_toRightOf="@+id/titletxt"
+            android:background="@drawable/blkborder_yellow_backgroung"
+            android:gravity="center"
+            android:text="I CAN'T GO"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/calendertxt"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/intxt"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/blkborder_yellow_backgroung"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="ADD TO MY CALENDAR" />
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/flag"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/meetprofileImgview"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+
+        android:layout_alignBottom="@+id/msg_layout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/defaultboy"
+        app:siBorderColor="@color/gray" />
+
+    </RelativeLayout>
+
+

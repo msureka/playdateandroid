@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bba.playdate1.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/home_fragment"
+        android:name="com.bba.playdate"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="60dp">
+
+    </FrameLayout>
+    <RelativeLayout android:id="@+id/relative_popup"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:background="@color/black1"
+        android:visibility="invisible"
+        android:layout_marginBottom="60dp">
+    </RelativeLayout>
+
+    <include android:id="@+id/footer"
+        layout="@layout/footer"/>
+
+
+</RelativeLayout>

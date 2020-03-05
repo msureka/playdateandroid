@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:paddingBottom="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/darkgray"
+        android:text="Date"
+        android:gravity="center"
+        android:id="@+id/datetxt" />
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/profileImgview1"
+        android:src="@drawable/defaultboy"
+        app:siBorderColor="@color/gray"
+        android:layout_alignBottom="@+id/msg_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/msg_layout"
+        android:layout_below="@+id/datetxt"
+        android:layout_toRightOf="@+id/profileImgview1"
+        android:layout_toLeftOf="@+id/profileImgview2">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellowtextbox"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:text="HIashhsdfhdshfklsdhfksdhkl;hsgdshsdjkhgsdhlhasdklhasdjl;sdjjdsl;jdsl;jsdljsdjdhsdhskldhksdhklhsdklhsdklhdsklhdsklhsdkl"
+            android:id="@+id/textView"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/image"
+            android:src="@drawable/flag"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/profileImgview2"
+        android:src="@drawable/defaultboy"
+        app:siBorderColor="@color/gray"
+        android:layout_alignTop="@+id/profileImgview1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>

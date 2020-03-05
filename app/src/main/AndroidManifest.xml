@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bba.playdate1">
+
+    <uses-permission-sdk-23 android:name="android.permission.CAMERA" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature android:name="android.hardware.location.gps" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!-- meta data for urbanairship (push notification) -->
+
+
+        <!-- meta data for gcm (gps) -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Activities -->
+        <!-- Welcome Acticity (LaucherActivity) -->
+        <activity android:name="com.bba.playdate1.WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider{@string/facebook_app_id}"
+            android:exported="true" />
+
+        <!-- MAinprofile Acticity -->
+        <activity android:name=".MainProfileActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Name Acticity -->
+        <activity android:name=".NameActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Aboutme Acticity -->
+        <activity android:name=".AboutMeActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- BirthDate Acticity -->
+        <activity android:name=".BirthDateActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Like to play Acticity -->
+        <activity android:name=".PlayProfileActivity" />
+
+        <!-- Like to Meet Acticity -->
+        <activity android:name=".MeetProfileActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Like to Meet Acticity -->
+        <activity android:name=".FavroiteProfileActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Like to Meet Acticity -->
+        <activity
+            android:name=".SuperHeroProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Main Acticity -->
+        <!-- it is Fragment Acticity -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!-- Setting Acticity -->
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <!-- talkto  Acticity -->
+        <activity android:name=".TalkToActivity"
+            android:screenOrientation="portrait"/>
+        <!-- how old Acticity -->
+        <activity android:name=".HowOldActivty"
+            android:screenOrientation="portrait"/>
+        <!-- Where Acticity -->
+        <activity android:name=".WhereActivity"
+            android:screenOrientation="portrait"/>
+        <!-- Gender Acticity -->
+        <activity android:name=".GenderActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".SimpleSampleActivity"
+            android:screenOrientation="portrait"/>
+
+
+
+        <!-- Imagecrop Acticity -->
+
+
+        <!-- ViewMatch Popup Activity -->
+        <activity android:name=".ViewMatchActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- ViewADMatch Popup Activity -->
+        <activity android:name=".ViewAdMatchActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Chat  Activity -->
+
+
+        <!-- Profile  Activity -->
+        <activity android:name=".ProfileActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Tutorial  Activity -->
+        <activity android:name=".Tutorial"
+            android:screenOrientation="portrait"/>
+
+        <!-- Terms  Activity -->
+        <activity android:name=".TermsActivity"
+            android:screenOrientation="portrait"/>
+
+        <!-- Privacy  Activity -->
+        <activity android:name=".PrivacyActivity"
+            android:screenOrientation="portrait"/>
+        <!-- Receiver -->
+        <!-- OPTIONAL, if you want to receive push, push opened and registration completed intents -->
+        <!-- Replace the receiver below with your package and class name -->
+
+        <activity android:name=".OTPActivity"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name=".MyFirebaseInstanceIdServices"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseMessengingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".CreateNewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SuggestFreindActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".EditmeetActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".FrirndReqActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".QuestionActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".BasicActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ResultActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".OtpVerifyActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LanguagesNewActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Chating_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Chating_meetups_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".setting_meetups_user1"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Facebook_add_friends"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Contact_lists"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Add_profilematch_Activity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Profile_Discover_info"
+            android:screenOrientation="portrait"></activity>
+
+    </application>
+
+</manifest>

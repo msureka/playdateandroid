@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:paddingBottom="7dp"
+    android:orientation="vertical"
+   >
+    <TextView
+        android:id="@+id/date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/helvetica_light"
+        android:layout_centerHorizontal="true"
+        android:text="Date" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/date_txt"
+        android:layout_height="wrap_content">
+
+
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/profileImgview1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/msg_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/defaultboy"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:siBorderColor="@color/gray" />
+
+    <RelativeLayout
+        android:id="@+id/msg_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datetxt"
+        android:layout_marginRight="50dp"
+        android:layout_toRightOf="@+id/profileImgview1">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:fontFamily="@font/helvetica_light"
+            android:text="HIashhsdfhdshfklsdhfksdhkl;hsgdshsdjkhgsdhlhasdklhasdjl;sdjjdsl;jdsl;jsdljsdjdhsdhskldhksdhklhsdklhsdklhdsklhdsklhsdkl"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

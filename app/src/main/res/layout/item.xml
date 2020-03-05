@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ImageView
+        android:id="@+id/flag_img"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/flag"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/circle_img"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/circle1"
+        android:visibility="visible" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <FrameLayout
+            android:id="@+id/f1"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <!-- following imageView acts as the boarder which sitting in the background of our main container ImageView -->
+            <ImageView
+                android:id="@+id/back_imgview"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:src="@drawable/boypictureframe" />
+            <!-- following imageView holds the image as the container to our image -->
+            <!-- layout_margin defines the width of our boarder, here it's 1dp -->
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/profileImgview"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_gravity="center"
+                android:src="@drawable/defaultboy"
+                app:siBorderColor="@color/gray"
+                app:siBorderWidth="0dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/name_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/f1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="Mohit"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="38sp" />
+
+        <TextView
+            android:id="@+id/place_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            android:textSize="16sp"
+            android:text="Mumbai,India"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/emoji1_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_alignBottom="@+id/emoji2_txt"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@+id/emoji2_txt"
+            android:text="a"
+            android:background="@android:color/transparent"
+            android:editable="false"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/emoji2_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/place_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:editable="false"
+            android:layout_marginBottom="2dp"
+            android:text="a"
+            android:background="@android:color/transparent"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/emoji3_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/emoji2_txt"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/emoji2_txt"
+            android:text="a"
+            android:background="@android:color/transparent"
+            android:editable="false"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/desc_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emoji1_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginStart="14dp"
+            android:text="Description Here"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/item_swipe_left_indicator"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:alpha="0"
+        android:background="@drawable/like" />
+
+    <View
+        android:id="@+id/item_swipe_right_indicator"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:alpha="0"
+        android:background="@drawable/nope" />
+
+    <!-- 2nd View-->
+
+
+    <TextView
+        android:id="@+id/speaktxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flag_img"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:text="I speak"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/lang2_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lang1_txt"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/lang1_txt"
+        android:background="@drawable/btn_yellow_backgroung"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:text="English"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:id="@+id/lang1_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/speaktxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_yellow_backgroung"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:text="English"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/lang3_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lang1_txt"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lang1_txt"
+        android:background="@drawable/btn_yellow_backgroung"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        android:text="English"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lang3_txt"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:id="@+id/liketxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="I like to play "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/likeimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/liketxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/everywhere"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/likevalue_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/likeimg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Everywhere"
+            android:textColor="@color/black1"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/lang3_txt"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:id="@+id/meettxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Let&apos;s meet"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/meetimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/meettxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/mornings"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/meetvalue_txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/meetimg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:text="Mornings"
+            android:textColor="@color/black1"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/favtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/r2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="55dp"
+        android:text="My favorite activities are"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/act1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/act2"
+        android:layout_marginRight="55dp"
+        android:layout_toLeftOf="@+id/act2"
+        android:text="Activity1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/act2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/favtxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="Activity2"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/act3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/act2"
+        android:layout_marginLeft="65dp"
+        android:layout_toRightOf="@+id/act2"
+        android:text="Activity3"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/super_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/act1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:text="My favorite superheroe is"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/super_value_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/super_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/btn_yellow_backgroung"
+        android:paddingBottom="8dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
+        android:paddingTop="6dp"
+        android:text="Mummy"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="invisible" />
+
+    <!-- Ad Screen-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/gagaImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+
+                android:background="@color/lightgray"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/subtitle_txt"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@+id/gagaImg"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@color/Lightyellow"
+                android:gravity="center"
+                android:text="Subtitile"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="invisible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/layoutTop">
+
+
+            <TextView
+                android:id="@+id/title_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center_horizontal"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:visibility="invisible" />
+
+
+            <TextView
+                android:id="@+id/addesc_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/title_txt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="invisible" />
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/logo2_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toLeftOf="@+id/logo1_img"
+                android:layout_toStartOf="@+id/logo1_img"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:siBorderColor="@color/white"
+                android:background="@color/white"
+                android:visibility="invisible" />
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/logo4_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignTop="@+id/logo2_img"
+                android:layout_toStartOf="@+id/title_txt"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="15dp"
+                android:scaleType="fitXY"
+                app:siBorderColor="@color/white"
+                android:background="@color/white"
+                 android:visibility="invisible" />
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/logo5_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignTop="@+id/logo1_img"
+                android:layout_toEndOf="@+id/title_txt"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="15dp"
+                android:background="@color/white"
+                android:scaleType="fitXY"
+                app:siBorderColor="@color/white"
+                android:visibility="invisible" />
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/logo1_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:siBorderColor="@color/white"
+                android:background="@color/white"
+                android:visibility="invisible" />
+
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/logo3_img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/logo1_img"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="15dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
+                app:siBorderColor="@color/white"
+                android:background="@color/white"
+                android:layout_toRightOf="@+id/logo1_img"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/overlapImage"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:layout_above="@id/layoutBottom"
+            android:layout_marginBottom="-10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ribbon"
+            android:visibility="invisible" />
+    </RelativeLayout>
+</RelativeLayout>

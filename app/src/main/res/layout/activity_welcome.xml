@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:weightSum="2"
+    android:orientation="vertical"
+    >
+
+    <!-- Above Half Screen Layout-->
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/Lightyellow">
+
+
+        <TextView
+            android:id="@+id/apptitle_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/kg_feeling_regular"
+
+            android:text="Play:Date"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/never_post_txt"
+            android:id="@+id/Sugg_text1"
+            android:layout_below="@+id/apptitle_textview"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_alignLeft="@+id/apptitle_textview"
+            android:layout_alignStart="@+id/apptitle_textview"
+            android:layout_alignRight="@+id/apptitle_textview"
+            android:layout_alignEnd="@+id/apptitle_textview"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/term_txt"
+            android:id="@+id/term_textview1"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+    <!-- Below Half Screen Lyout -->
+    <RelativeLayout android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/r2"
+        android:background="@color/white">
+
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/btn_yellow_backgroung"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:text="@string/loginwithfb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/never_post_txt"
+            android:id="@+id/Sugg_textviww"
+            android:layout_below="@+id/loginbutton"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_alignLeft="@+id/loginbutton"
+            android:layout_alignStart="@+id/loginbutton"
+            android:layout_alignRight="@+id/loginbutton"
+            android:layout_alignEnd="@+id/loginbutton" />
+
+        <TextView
+            android:id="@+id/term_textview"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/Sugg_textviww"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/Sugg_textviww"
+
+            android:padding="10dp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="By signing in, you agree to our Terms of Service and Privacy Policy" />
+
+        <com.facebook.login.widget.LoginButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginbutton"
+            android:id="@+id/fblogin_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:visibility="invisible"/>
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:orientation="vertical"
+    android:paddingBottom="7dp">
+
+    <TextView
+        android:id="@+id/date_txt_meetupchat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="3dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:text="Date"
+        android:fontFamily="@font/helvetica_medium"
+        android:textStyle="normal"
+        android:textSize="12dp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl1"
+        android:layout_below="@+id/date_txt_meetupchat"
+        android:layout_height="wrap_content">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/mettup_pro_Imgview_left"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/msg_layout"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/defaultboy"
+            app:siBorderColor="@color/gray" />
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/mettup_pro_Imgview_rght"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@+id/msg_layout"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/defaultboy"
+            app:siBorderColor="@color/gray" />
+
+        <RelativeLayout
+            android:id="@+id/msg_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/datetxt"
+
+            android:layout_toStartOf="@id/mettup_pro_Imgview_rght"
+            android:layout_toEndOf="@id/mettup_pro_Imgview_left"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/yellowtextbox">
+
+            <ImageView
+                android:id="@+id/imagecalnder_right"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/calendar"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/textView_right_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagecalnder_right"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Test Account"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/helvetica_bold"
+                 />
+
+            <TextView
+                android:id="@+id/textView_right_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_right_title"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Test Account"
+                android:fontFamily="@font/helvetica_light"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_right_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_right_location"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:text="Test Account"
+                android:fontFamily="@font/helvetica_light"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/textView_right_Im"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_below="@+id/textView_right_subtitle"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="20dp"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="I'M IN"
+                android:background="@drawable/verifybtn_border"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/helvetica_bold" />
+
+            <TextView
+                android:id="@+id/textView_right_cantgo"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_above="@+id/textView_right_AddCalander"
+                android:layout_toEndOf="@+id/imagecalnder_right"
+                android:background="@drawable/verifybtn_border"
+                android:gravity="center"
+                android:maxLines="1"
+                android:layout_marginStart="5dp"
+                android:paddingEnd="2dp"
+                android:paddingStart="2dp"
+                android:text="CANT'T GO"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/helvetica_bold" />
+
+            <TextView
+                android:id="@+id/textView_right_AddCalander"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignStart="@+id/textView_right_Im"
+                android:layout_alignEnd="@+id/textView_right_cantgo"
+                android:layout_below="@+id/textView_right_Im"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="@drawable/verifybtn_border"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="ADD TO MY CALENDAR"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:fontFamily="@font/helvetica_bold" />
+
+
+
+        </RelativeLayout>
+        ></RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

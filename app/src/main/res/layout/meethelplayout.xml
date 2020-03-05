@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="0.92"
+    android:background="@color/black1"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:id="@+id/header"
+           >
+
+
+
+            <ImageView
+                android:id="@+id/joinbtn"
+                android:layout_width="30dp"
+                android:layout_height="22dp"
+                android:src="@drawable/joinyellow"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/jointxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/question_btn"
+                android:layout_alignStart="@+id/question_btn"
+                android:layout_below="@+id/joinbtn"
+                android:text="JOIN"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/Lightyellow"
+                android:textSize="10sp"
+                android:layout_marginBottom="4dp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+
+
+            <ImageView
+                android:id="@+id/plus_img1"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="14dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/plusyellow"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/createtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="CREATE"
+                android:layout_marginBottom="4dp"
+                android:textColor="@color/Lightyellow"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/butrl"
+            android:layout_below="@+id/header"
+            android:alpha="0.92"
+            android:clickable="false"
+            android:background="@color/black1">
+
+
+
+            <TextView
+                android:id="@+id/btnchat"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:onClick="show"
+                android:padding="10dp"
+                android:text=""
+                android:clickable="false"
+                android:background="@color/transparent"
+                android:textSize="16sp"
+
+                android:fontFamily="@font/helvetica_regular"
+                android:textColor="@color/transparent" />
+
+            <TextView
+                android:id="@+id/btnmeet"
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:onClick="show"
+                android:clickable="false"
+                android:padding="10dp"
+                android:text="MEET-UPS"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:background="@color/Lightyellow"
+                android:fontFamily="@font/helvetica_regular"
+                android:textColor="@color/black1" />
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="180dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toEndOf="@+id/progressBar2"
+                android:background="@color/transparent"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar2"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="200dp"
+                android:layout_height="3dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/btnmeet"
+                android:layout_toStartOf="@+id/btnmeet"
+                android:background="@color/transparent"/>
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_meets1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/butrl"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:text="Your meet-up invitations are shown here."/>
+
+        <TextView
+            android:id="@+id/txt_meets2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_meets1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="You can create a meet-up of your own and invite your friends by clicking on the +CREATE buttom on the screen."/>
+
+
+        <TextView
+            android:id="@+id/txt_meets3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_meets2"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="If you receive a special Play:Date meet-up code,enter it by cliking on the JOIN button on the top left of the screen"/>
+
+
+        <Button
+            android:id="@+id/gotbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txt_meets3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/blackborderbtn1"
+            android:layout_marginBottom="25dp"
+            android:text="Got it!"
+            android:paddingEnd="60dp"
+            android:paddingStart="60dp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+            android:layout_alignBaseline="@+id/butrl"
+            android:layout_alignBottom="@+id/butrl"
+            android:layout_toEndOf="@+id/butrl"
+            android:background="@color/Lightyellow"
+            android:clickable="false"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:text=" MEET-UPS"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        ></RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

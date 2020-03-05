@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+        <!-- Ad Screen-->
+        <RelativeLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/layoutTop">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:id="@+id/gagaImg"
+                    android:scaleType="fitXY"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/bluetextbox"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:text="Subtitile"
+                    android:gravity="center"
+                    android:layout_below="@+id/gagaImg"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:background="@color/Lightyellow"
+                    android:id="@+id/subtitle_txt"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutBottom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/layoutTop" >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:text="Title"
+                    android:id="@+id/title_txt"
+                    android:layout_below="@+id/relativeLayout4"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:visibility="visible"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Description"
+                    android:id="@+id/addesc_txt"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/title_txt"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="visible"/>
+
+
+                   <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/logo2_img"
+                    android:src="@drawable/bluetextbox"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/logo1_img"
+                    android:layout_toStartOf="@+id/logo1_img"
+                    android:visibility="visible"/>
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/logo1_img"
+                    android:src="@drawable/bluetextbox"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="visible"/>
+
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/logo3_img"
+                    android:src="@drawable/bluetextbox"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/logo1_img"
+                    android:layout_toEndOf="@+id/logo1_img"
+                    android:visibility="visible"/>
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/overlapImage"
+                android:layout_width="60dp"
+                android:layout_height="45dp"
+                android:layout_above="@id/layoutBottom"
+                android:layout_marginBottom="-10dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ribbon"
+                android:visibility="visible"/>
+        </RelativeLayout>
+</RelativeLayout>

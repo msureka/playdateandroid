@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.bba.playdate1.Chating_Activity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/header_meetupchat"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/lable_border">
+
+        <TextView
+            android:id="@+id/back_txt_meetupchat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="1dp"
+            android:fontFamily="@font/helvetica_medium"
+            android:text="Back"
+            android:paddingRight="18dp"
+            android:paddingLeft="18dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/relative_meetupschat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+
+
+            <TextView
+                android:id="@+id/txtview_metupchattile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="8dp"
+                android:layout_toRightOf="@+id/profileImgview"
+                android:text="Lets Meet!"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/helvetica_bold"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/meetups_setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/setting" />
+
+        <ImageView
+            android:id="@+id/meetups_setting_share2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="32dp"
+            android:layout_toStartOf="@+id/meetups_setting"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/sharex" />
+
+        <TextView
+            android:id="@+id/txt_meetups_setting_share2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignEnd="@+id/meetups_setting_share2"
+            android:layout_alignTop="@+id/meetups_setting"
+            android:src="@drawable/sharex" />
+
+    </RelativeLayout>
+
+    <TextView android:id="@+id/textvie_meetup_creatdate"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/search_meetup"
+        android:text="Create 20/12/89"
+        android:fontFamily="@font/helvetica_medium"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textSize="14dp">
+    </TextView>
+
+
+    <ListView
+        android:id="@+id/meeups_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:divider="@null"
+        android:listSelector="@color/transparent"
+        android:stackFromBottom="true"
+        android:transcriptMode="normal"
+        >
+
+    </ListView>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/boderline"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.45">
+
+            <ImageView
+                android:id="@+id/camera_meetupchat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                tools:ignore="Suspicious0dp"
+                android:src="@drawable/cam"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="0.13">
+            <EditText
+                android:id="@+id/textview_meetupchat_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:maxLines="5"
+                android:paddingStart="10dp"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:textStyle="normal"
+                android:ellipsize="end"
+                android:hint="Type a message..."
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.4">
+
+            <Button
+                android:id="@+id/meetupschat_send"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:background="@drawable/btn_shape"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:text="Send" />
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="7dp"
+    android:orientation="vertical"
+    android:paddingBottom="7dp">
+
+    <TextView
+        android:id="@+id/date_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="3dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/helvetica_light"
+        android:layout_centerHorizontal="true"
+        android:text="Date" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rl1"
+        android:layout_below="@+id/date_txt"
+        android:layout_height="wrap_content">
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/profileImgview1_rght"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/msg_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/defaultboy"
+        app:siBorderColor="@color/gray" />
+
+    <RelativeLayout
+        android:id="@+id/msg_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/datetxt"
+        android:layout_marginLeft="50dp"
+        android:layout_toLeftOf="@+id/profileImgview1_rght">
+
+
+        <TextView
+            android:id="@+id/textView_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/yellowtextbox"
+            android:padding="5dp"
+            android:fontFamily="@font/helvetica_light"
+            android:text="HIashhsdfhdshfklsdhfksdhkldsklhdsklhsdkl"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+        ></RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

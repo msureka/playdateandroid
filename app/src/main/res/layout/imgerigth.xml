@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/date_txt_img2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="8dp"
+        android:text="Date"
+        android:fontFamily="@font/helvetica_light"
+        android:textColor="@color/black" />
+
+    <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/profileImgview1_imagel"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/msg_layout"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/defaultboy"
+        app:siBorderColor="@color/gray" />
+
+    <RelativeLayout
+        android:id="@+id/msg_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/date_txt_img2"
+        android:layout_marginLeft="30dp"
+
+        android:layout_toLeftOf="@+id/profileImgview1_imagel">
+
+
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/imgerigth_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            app:siShape="@drawable/shape_rounded_rectangle"
+            app:siSquare="true"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_launcher" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

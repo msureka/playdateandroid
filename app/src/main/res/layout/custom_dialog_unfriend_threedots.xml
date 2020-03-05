@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/cutom_dilaog_threedot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_rounded_rectangle"
+        >
+
+
+        <TextView
+            android:id="@+id/textview_unfriends"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/red"
+            android:layout_marginTop="10dp"
+            android:text="Unfriend"
+            android:background="@drawable/boderline_bottom1px"/>
+
+
+
+
+        <TextView
+            android:id="@+id/textview_flagapropriate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_below="@+id/textview_unfriends"
+            android:text="Flag as inappropriate"
+            android:background="@drawable/boderline_bottom1px"/>
+
+
+        <TextView
+            android:id="@+id/textview_Cancel_flagappropriate"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:layout_below="@+id/textview_flagapropriate"
+            android:text="Cancel"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

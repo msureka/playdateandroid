@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/list_topline"
+        android:layout_width="match_parent"
+        android:layout_height="0.9dp"
+        android:background="@color/lightgray"
+         />
+<TextView android:id="@+id/title_chating"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:layout_below="@+id/list_topline"
+    android:text="">
+
+</TextView>
+    <LinearLayout
+        android:id="@+id/ImagesHsw1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    </LinearLayout>
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scr"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:transcriptMode="normal"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_chating">
+        <LinearLayout
+            android:id="@+id/ImagesHsw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+
+</RelativeLayout>

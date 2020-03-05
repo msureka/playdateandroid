@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/header_border1"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Edit Play:Date"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/canceltxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/textView22"
+            android:layout_alignBottom="@+id/textView22"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="11dp"
+            android:text="Cancel"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/somothing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:background="@color/white">
+
+
+        <EditText
+            android:id="@+id/edittext_meetuptitle"
+            android:layout_width="398dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:background="@null"
+            android:hint="Meetup title"
+            android:inputType="textNoSuggestions"
+            android:padding="10dp" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/locrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/somothing"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="398dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:background="@null"
+            android:hint="Location"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:inputType="textNoSuggestions" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/inforl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locrl"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+
+        <EditText
+            android:id="@+id/infotxt"
+            android:layout_width="398dp"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5dp"
+            android:background="@null"
+            android:hint="Other Information(optional)"
+            android:padding="10dp"
+            android:inputType="textNoSuggestions" />
+
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/inforl"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:id="@+id/daytxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:hint="saturday"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="17-feb-2017"
+            android:layout_margin="30dp"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/timetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="6:06"
+            android:layout_marginTop="30dp"
+            android:textSize="15sp" />
+
+ </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/savenewtxt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal"
+        android:paddingTop="10dp"
+        android:text="SAVE"
+        android:background="@color/Lightyellow"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:emojicon="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/Lightyellow"
+        android:id="@+id/relativeLayout">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Gender"
+            android:textSize="18sp"
+            android:id="@+id/title_txt"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="save"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:id="@+id/save_txt"
+            android:textSize="18sp"
+
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/lable_border"
+        android:layout_below="@+id/relativeLayout"
+        android:id="@+id/r11">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="I am a"
+            android:id="@+id/textView2"
+            android:textSize="18sp"
+            android:textColor="@color/gray"
+            android:layout_marginLeft="21dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="21dp" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/lable_border"
+        android:id="@+id/r22"
+        android:layout_below="@+id/r11"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <io.github.rockerhieu.emojicon.EmojiconTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Boy \uE001"
+        android:textSize="18sp"
+        android:id="@+id/boy_txt"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/boy_img"
+        android:src="@drawable/tick"
+        android:visibility="invisible"
+        android:checked="false"
+        android:layout_alignTop="@+id/boy_txt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/lable_border"
+        android:layout_below="@+id/r22"
+        android:id="@+id/r33">
+
+
+        <io.github.rockerhieu.emojicon.EmojiconTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Girl \uE002"
+            emojicon:emojiconAlignment="baseline"
+            android:textSize="18sp"
+            android:id="@+id/girl_txt"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/girl_img"
+            android:src="@drawable/tick"
+            android:visibility="invisible"
+            android:layout_alignTop="@+id/girl_txt"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+
+

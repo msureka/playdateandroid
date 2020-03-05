@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <SearchView
+        android:id="@+id/search_chat"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/lightgray"
+        android:queryHint="Search here"
+        android:queryBackground="@android:color/transparent"
+        android:iconifiedByDefault="false">
+    </SearchView>
+
+    <ListView android:id="@+id/list_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@id/search_chat"
+        android:transcriptMode="normal"
+        android:background="@null"
+        android:divider="@null">
+    </ListView>
+
+
+</RelativeLayout>
+

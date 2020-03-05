@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/header_ad"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/lable_border">
+
+
+
+        <TextView
+            android:id="@+id/back_txt_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginBottom="10sp"
+            android:text="Back"
+            android:fontFamily="@font/helvetica_medium"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nametxt_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/helvetica_medium"
+            android:text="Play:Date Team"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header_ad"
+        android:id="@+id/layoutTop">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gagaImg"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_below="@+id/gagaImg"
+            android:text="Subtitile"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:fontFamily="@font/helvetica_medium"
+            android:background="@color/Lightyellow"
+            android:id="@+id/subtitle_txt"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:id="@+id/overlapImage"
+            android:layout_width="45dp"
+            android:layout_height="40dp"
+          android:layout_marginStart="12dp"
+            android:layout_alignBottom="@+id/subtitle_txt"
+            android:layout_alignParentStart="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ribbon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/layoutTop" >
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/helvetica_medium"
+            android:gravity="center"
+            android:text="Title"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Description"
+            android:id="@+id/desc_txt"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="8dp"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/helvetica_normal"
+            android:layout_below="@+id/title_txt"
+            android:layout_centerHorizontal="true" />
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/logo2_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="14dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:siBorderColor="@color/white"
+            android:layout_toStartOf="@+id/desc_txt"
+            android:background="@color/transparent"
+            android:visibility="visible"/>
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/logo1_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/defaultboy"
+            app:siBorderColor="@color/white"
+            android:visibility="visible" />
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/logo3_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignTop="@+id/logo2_img"
+            android:layout_marginStart="14dp"
+            android:scaleType="fitXY"
+            app:siBorderColor="@color/white"
+            android:layout_toEndOf="@+id/desc_txt"
+            android:background="@color/transparent"
+            android:visibility="visible" />
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/logo4_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:siBorderColor="@color/white"
+            android:layout_alignEnd="@+id/logo3_img"
+            android:layout_alignTop="@+id/logo1_img"
+            android:layout_marginEnd="20dp"
+            android:visibility="visible"
+            android:background="@color/transparent" />
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/logo5_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            app:siBorderColor="@color/white"
+            android:layout_alignTop="@+id/logo2_img"
+            android:layout_toStartOf="@+id/title_txt"
+            android:background="@color/transparent"
+            android:visibility="visible" />
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

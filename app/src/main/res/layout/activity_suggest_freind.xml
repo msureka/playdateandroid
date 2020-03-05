@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/white"
+    tools:context="com.bba.playdate1.SuggestFreindActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_suggested"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"></ProgressBar>
+
+
+    <TextView
+        android:id="@+id/txt_sujetion_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/helvetica_normal"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="You do not have any in-app friends yet.\n\n You can still create your Play:Date and share it with your friends by clicking on the event settings."
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative_suggest"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/header_border1">
+
+        <ImageView
+            android:id="@+id/backimg1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:id="@+id/backimg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/backarrow" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/helvetica_bold"
+            android:text="Add friends"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/sendfrndbtn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/backimg"
+            android:fontFamily="@font/helvetica_medium"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Done"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <SearchView
+        android:id="@+id/search_suggested"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/relative_suggest"
+        android:background="@color/gray"
+        android:queryBackground="@android:color/transparent"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search here"></SearchView>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/search_suggested"
+        android:background="@color/lightgray"
+        android:fontFamily="@font/helvetica_medium"
+        android:padding="7dp"
+        android:paddingLeft="15dp"
+        android:text="Suggested friends"
+        android:textSize="14dp" />
+
+
+    <!--<TextView-->
+    <!--android:id="@+id/nofrndtxt"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="200dp"-->
+    <!--android:layout_below="@+id/rl"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:layout_marginTop="70dp"-->
+    <!--android:visibility="invisible"-->
+    <!--android:text="You do not have any in-app friends yet.\n\nYou can still create your Play:Date and share it with your frinds by clicking on the event" />-->
+
+    <ListView
+        android:id="@+id/listview_sugested"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView8"
+        android:divider="@color/white" />
+
+</RelativeLayout>

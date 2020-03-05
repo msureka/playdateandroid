@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+android:background="@color/lightgray"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/header_border1"
+        android:layout_alignParentTop="true">
+
+
+        <TextView
+            android:id="@+id/canceltxt"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/helvetica_medium"
+            android:gravity="center"
+            android:paddingBottom="9dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="9dp"
+            android:text="Cancel"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView22_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/helvetica_bold"
+            android:text="New Play:Date"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+        <TextView
+            android:id="@+id/textView22_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView22_title"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/yellowtextbox"
+            android:fontFamily="@font/helvetica_normal"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:text="Invite"
+            android:textColor="@color/black1"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollsviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@+id/relativeLayout"
+        >
+
+        <RelativeLayout
+            android:id="@+id/scrollsviews_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout"
+            >
+
+            <RelativeLayout
+                android:id="@+id/somothing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+
+                <EditText
+                    android:id="@+id/edittext_meetuptitle"
+                    android:layout_width="398dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:fontFamily="@font/helvetica_medium"
+                    android:hint="Meetup title"
+                    android:inputType="textNoSuggestions"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/locrl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/somothing"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+
+                <EditText
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:fontFamily="@font/helvetica_medium"
+                    android:hint="Location"
+                    android:inputType="textNoSuggestions"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/inforl"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/locrl"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+
+                <EditText
+                    android:id="@+id/infotxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:hint="Other Information (optional)"
+                    android:text="" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_time"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:layout_below="@+id/inforl"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:fontFamily="@font/helvetica_medium"
+                android:orientation="horizontal"
+                android:textSize="16sp">
+
+                <TextView
+                    android:id="@+id/daytxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/helvetica_medium"
+                    android:hint="saturday"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:fontFamily="@font/helvetica_medium"
+                    android:hint="17-feb-2017"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/timetxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/helvetica_medium"
+                    android:hint="6:06"
+                    android:textSize="16sp" />
+
+                <TimePicker
+                    android:id="@+id/timePicker1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="86dp" />
+
+                <TextView
+                    android:id="@+id/ampmtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="30dp"
+                    android:hint="AM"
+                    android:textSize="15sp"
+                    android:visibility="invisible" />
+
+
+            </LinearLayout>
+
+            <TextView
+
+                android:id="@+id/invitenewtxt1"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+               android:layout_alignTop="@+id/invitenewtxt"
+                android:background="@color/transparent"
+                android:fontFamily="@font/helvetica_bold"
+                android:gravity="center"
+                android:text=""
+                android:layout_marginBottom="1dp"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+            <TextView
+
+                android:id="@+id/invitenewtxt"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/Lightyellow"
+                android:fontFamily="@font/helvetica_bold"
+                android:gravity="center"
+                android:text="Invite Friends"
+                android:layout_marginBottom="1dp"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+    </RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/textview_setting_first"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+
+        android:gravity="center"
+        android:background="@color/lightgray"
+        android:text="Invite Play:Date friends" />
+
+    <TextView
+        android:id="@+id/textview_setting_seconds"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textview_setting_first"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:background="@color/lightgray"
+        android:text="Invite other friends" />
+
+    <TextView
+        android:id="@+id/textview_setting_Thrid"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textview_setting_seconds"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:background="@color/lightgray"
+        android:text="Edit this meetup" />
+
+    <TextView
+        android:id="@+id/textview_setting_Four"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textview_setting_Thrid"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:background="@color/lightgray"
+        android:text="Delete this meetup" />
+
+
+</RelativeLayout>

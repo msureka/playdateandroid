@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relative_contacts_sub"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/text_contact_names"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"
+            android:text="sachin Mokashi"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:textStyle="bold">
+        </TextView>>
+
+        <TextView
+            android:id="@+id/text_number_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_below="@+id/text_contact_names"
+            android:text="sachin Mokashi"
+            android:gravity="center"
+            android:layout_marginStart="15dp"
+            android:textSize="16dp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/text_number_email"
+            android:text="sachin Mokashi"
+            android:gravity="center"
+            android:background="@color/lightgray">
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_invte_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:text="INVITE"
+            android:textColor="@color/black1"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/yellowtextbox"
+            android:textStyle="bold"></TextView>
+
+    </RelativeLayout>>
+
+</RelativeLayout>

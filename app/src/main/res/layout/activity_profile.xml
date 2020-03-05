@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/flag_img"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/backarrow" />
+
+    <ImageView
+        android:id="@+id/circle_img"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/circle1" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:id="@+id/f1"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <!-- following imageView acts as the boarder which sitting in the background of our main container ImageView -->
+            <ImageView
+                android:id="@+id/back_imgview"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:src="@drawable/boypictureframe" />
+            <!-- following imageView holds the image as the container to our image -->
+            <!-- layout_margin defines the width of our boarder, here it's 1dp -->
+
+            <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/profileImgview"
+                android:layout_width="165dp"
+                android:layout_height="165dp"
+                android:layout_gravity="center"
+                android:src="@drawable/defaultboy"
+                app:siBorderColor="@color/gray"
+                app:siBorderWidth="0dp" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/name_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/f1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Mohit"
+            android:textColor="@color/black"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/place_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="Mumbai,India"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/emoji1_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/emoji2_txt"
+            android:layout_marginRight="50dp"
+            android:layout_toLeftOf="@+id/emoji2_txt"
+            android:text="a"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/emoji2_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/place_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="a"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/emoji3_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/emoji2_txt"
+            android:layout_marginLeft="50dp"
+            android:layout_toRightOf="@id/emoji2_txt"
+            android:text="a"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/desc_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/emoji1_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="Description Here"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/super_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/desc_txt"
+            android:layout_centerHorizontal="true"
+            android:text="My favorite superheroes is"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/item_swipe_left_indicator"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:alpha="0"
+        android:background="@drawable/like" />
+
+    <View
+        android:id="@+id/item_swipe_right_indicator"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:alpha="0"
+        android:background="@drawable/nope" />
+
+    <!-- 2nd View-->
+
+
+    <!-- <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:textAppearance="?android:attr/textAppearanceMedium"
+         android:text="I speak"
+         android:layout_marginTop="5dp"
+         android:id="@+id/speaktxt"
+         android:textColor="@color/black"
+         android:layout_gravity="center_horizontal"
+         android:layout_below="@+id/flag_img"
+         android:layout_centerHorizontal="true"
+         android:visibility="invisible"/>-->
+
+    <TextView
+        android:id="@+id/lang2_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lang1_txt"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/lang1_txt"
+        android:background="@drawable/btn_yellow_backgroung"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="English"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:id="@+id/lang1_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/speaktxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_yellow_backgroung"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="English"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/lang3_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/lang1_txt"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/lang1_txt"
+        android:background="@drawable/btn_yellow_backgroung"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp"
+        android:text="English"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lang3_txt"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="45dp">
+
+        <TextView
+            android:id="@+id/liketxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="I like to play "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/likeimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/liketxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/everywhere"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/likevalue_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/likeimg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="Everywhere"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/lang3_txt"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="45dp">
+
+        <TextView
+            android:id="@+id/meettxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Let&apos;s meet"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/meetimg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/meettxt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/mornings"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/meetvalue_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/meetimg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:text="Mornings"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/favtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/r2"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="My favorit activities are"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/act1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/act2"
+        android:layout_marginRight="25dp"
+        android:layout_toLeftOf="@+id/act2"
+        android:text="Activity1"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/act2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/favtxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Activity2"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/act3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/act2"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/act2"
+        android:text="Activity3"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/super_value_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_yellow_backgroung"
+
+        android:gravity="center_horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:text="Mummy"
+
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

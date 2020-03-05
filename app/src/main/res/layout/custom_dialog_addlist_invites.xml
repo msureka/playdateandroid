@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/cutom_dilaog_invited_list1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/shape_rounded_rectangle"
+        >
+
+
+    <TextView
+        android:id="@+id/textview_facebook_invite1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:text="Add Facebook friends"
+        android:background="@drawable/boderline_bottom1px"/>
+
+        <TextView
+            android:id="@+id/textview_email_invite1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/textview_facebook_invite1"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:text="Invite by email address"
+            android:background="@drawable/boderline_bottom1px"/>
+
+
+
+
+        <TextView
+            android:id="@+id/textview_mobile_invite1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_below="@+id/textview_email_invite1"
+            android:text="Invite by mobile number"
+            android:background="@drawable/boderline_bottom1px"/>
+
+
+
+
+        <TextView
+            android:id="@+id/textview_contacts_invite1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_below="@+id/textview_mobile_invite1"
+            android:text="Invite contacts"
+            android:background="@drawable/boderline_bottom1px"/>
+
+        <TextView
+            android:id="@+id/textview_post_fb_invite1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_below="@+id/textview_contacts_invite1"
+            android:text="Post on Facebook"
+            android:background="@drawable/boderline_bottom1px"/>
+
+        <TextView
+            android:id="@+id/textview_Cancel_invite1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:layout_below="@+id/textview_post_fb_invite1"
+            android:text="Cancel"
+            android:textColor="@color/colorAccent"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

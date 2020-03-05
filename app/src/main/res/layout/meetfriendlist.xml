@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/relative_meetups"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/boderline_bottom">
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+        android:id="@+id/imageView2_meetup"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/defaultboy"
+        android:layout_marginStart="10dp"
+            app:siBorderColor="@color/white"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+        android:layout_marginBottom="15dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/calander_image_meetup"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignTop="@+id/imageView2_meetup"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/imageView2_meetup"
+        android:background="@drawable/calendar" />
+
+    <TextView
+        android:id="@+id/textView_meetupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/calander_image_meetup"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="5dp"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/calander_image_meetup"
+        android:text="8th May 2018, 11:34am"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_title_meetup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/calander_image_meetup"
+        android:layout_below="@+id/calander_image_meetup"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:text="Test account"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView_title_meetup"
+        android:layout_below="@+id/textView_title_meetup"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:text="Hi i am sachin............."
+        android:textSize="12sp"
+        android:textStyle="normal" />
+
+    <ImageView
+        android:id="@+id/redimg_meetups"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/textView_subtitle"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/reddot" />
+    </RelativeLayout>
+
+</RelativeLayout>

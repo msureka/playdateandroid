@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- time for sliding process: 3 seconds -->
+
+    <integer name="open_activity_time">240</integer>
+    <integer name="close_activity_time">240</integer>
+
+</resources>
